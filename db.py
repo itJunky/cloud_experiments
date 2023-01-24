@@ -13,14 +13,14 @@ if DB_USER:
     print(f'Have credentials for DB_USER: {DB_USER}')
 else:
     print('Use default credentials for DB')
-    DB_USER = 'micro'
-    DB_PASS = 'ciew1Igh'
-    DB_HOST = 'localhost'
+    DB_USER = 'root'
+    DB_PASS = 'change-me'
+    DB_HOST = '127.0.0.1'
 
 
 Base = declarative_base()
-basedir = os.path.abspath(os.path.dirname(__file__))
 db_path = 'mysql+pymysql://' + DB_USER + ':' + DB_PASS + '@' + DB_HOST + '/' + DB_NAME 
+print(db_path)
 engine = create_engine(db_path, echo=False)
 
 
