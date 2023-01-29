@@ -33,6 +33,7 @@ docker run --name cld-rabbit -d \
 
 ## RUN
 
+### Generator
 For generate 100 jobs run:
 ```
 python3 generator.py 100
@@ -41,5 +42,10 @@ python3 generator.py 100
 Or 100 by 100:
 ```
 for i in `seq 100`; do python3 generator.py 100; done
+```
+### Consumer
+For getting messages from RMQ:
+```
+python3 rmq3_res.py anonymous.info
 ```
 
