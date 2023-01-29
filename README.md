@@ -26,7 +26,13 @@ docker run --name cld-rabbit -d \
 
 ## RUN
 
+For generate 100 jobs run:
 ```
-python3 generator.py
+python3 generator.py 100
+```
+
+Or 100 by 100:
+```
+for i in `seq 100`; do python3 generator.py 100; done
 ```
 
