@@ -5,7 +5,6 @@
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requiremnts.txt
-python3 create_db.py
 ```
 If need mysql, just run it on localhost:
 ```
@@ -18,9 +17,8 @@ docker run --name mysql -d \
 
 Than create database and after import initial data.
 ```
-python3 create_db.py
+python3 ./app/create_db.py
 ```
-
 
 For RabbitMQ:
 ```
@@ -36,16 +34,16 @@ docker run --name cld-rabbit -d \
 ### Generator
 For generate 100 jobs run:
 ```
-python3 generator.py 100
+python3 ./app/generator.py 100
 ```
 
 Or 100 by 100:
 ```
-for i in `seq 100`; do python3 generator.py 100; done
+for i in `seq 100`; do python3 ./app/generator.py 100; done
 ```
 ### Consumer
 For getting messages from RMQ:
 ```
-python3 rmq3_res.py anonymous.info
+python3 ./app/rmq_reciever.py anonymous.info
 ```
 
