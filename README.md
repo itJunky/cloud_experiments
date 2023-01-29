@@ -15,6 +15,9 @@ docker run --name mysql -d \
        --restart unless-stopped \
        mysql:8
 ```
+Than create database.
+
+
 For RabbitMQ:
 ```
 docker run --name cld-rabbit -d \
