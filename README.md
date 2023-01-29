@@ -15,7 +15,11 @@ docker run --name mysql -d \
        --restart unless-stopped \
        mysql:8
 ```
-Than create database.
+
+Than create database and after import initial data.
+```
+python3 create_db.py
+```
 
 
 For RabbitMQ:
